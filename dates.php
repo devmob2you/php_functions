@@ -2,6 +2,8 @@
 //Set your timezone
 date_default_timezone_set('America/Sao_Paulo');
 
+//date('d/m/Y', strtotime($data)  ==> Converte data de YYYY-mm-dd para dd/mm/YYYY
+
 $week = date('w'); //return 0=Sunday to 6=Saturday
 $day = date('d'); //retun 01 to 31 (day of month)
 $month = date('m'); //return 01=January to 12=December
