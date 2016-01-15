@@ -2,6 +2,30 @@
 //Set your timezone
 date_default_timezone_set('America/Sao_Paulo');
 
+//CODEIGNITER HELPER
+function date_to_mysql($date) {
+    $data_array = explode('/', $date);
+    $ano = $data_array[2];
+    $mes = $data_array[1];
+    $dia = $data_array[0];
+    return $ano . '-' . $mes . '-' . $dia;
+}
+
+function mysql_to_date($date) {
+
+    $data_array = explode('-', $date);
+    $ano = $data_array[0];
+    $mes = $data_array[1];
+    $dia = $data_array[2];
+
+    $data_formatada = $dia . '/' . $mes . '/' . $ano;
+
+
+    return $data_formatada;
+}
+//END: CODEIGNITER HELPER
+
+
 //date('d/m/Y', strtotime($data)  ==> Converte data de YYYY-mm-dd para dd/mm/YYYY
 
 $week = date('w'); //return 0=Sunday to 6=Saturday
